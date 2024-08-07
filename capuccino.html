@@ -1,0 +1,38 @@
+deixe palavra ; 
+
+configuração de função () { 
+  criarCanvas ( 400 , 400 );
+  
+  palavra = palavraAleatoria ();  
+  
+}
+
+function palavraAleatória () { 
+  
+  let palavras = [ 'caminhante' , 'caminho' , 'caminhar' ];  
+  
+  retornar aleatório ( palavras ); 
+}
+  
+função inicializaCores () { 
+  background('white');
+  fill('black');
+  tamanho do texto ( 64 );
+  textAlign ( CENTRO , CENTRO );
+}
+
+function palavraParcial ( mínimo , máximo ) { 
+  deixe quantidade = mapa ( mouseX , minimo , maximo , 1 , palavra . length );   
+  deixe parcial = palavra . substring ( 0 , quantidade );   
+  retornar parcial ; 
+}
+
+função draw () { 
+  
+  inicializaCores ();
+  
+  deixe parcial = palavraParcial ( 0 , width );   
+  
+  texto ( parcial , 200 , 200 );
+  
+}
